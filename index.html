@@ -132,9 +132,14 @@ function update(source) {
           s += "Condition- " + d.condition;
           prev = true
         }
-        if (d.attribute) {
+        if (d.attribute != null) {
           s += (prev? " | " : "")
           s += "Attribute- " + d.attribute;
+          prev = true;
+        }
+        if (d.divide != null) {
+          s += (prev? " | " : "")
+          s += "Divide- " + d.divide;
           prev = true;
         }
         if (d.answer != null) {
