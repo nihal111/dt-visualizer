@@ -1,0 +1,222 @@
+{
+  "attribute": "floors", 
+  "children": [
+    {
+      "attribute": "view", 
+      "children": [
+        {
+          "answer": 1, 
+          "condition": 0
+        }, 
+        {
+          "answer": 2, 
+          "condition": 1
+        }, 
+        {
+          "answer": 2, 
+          "condition": 2
+        }, 
+        {
+          "answer": 2, 
+          "condition": 3
+        }, 
+        {
+          "answer": 2, 
+          "condition": 4
+        }, 
+        {
+          "answer": 1
+        }
+      ], 
+      "condition": 1
+    }, 
+    {
+      "attribute": "grade", 
+      "children": [
+        {
+          "answer": 1, 
+          "condition": 4
+        }, 
+        {
+          "answer": 1, 
+          "condition": 5
+        }, 
+        {
+          "answer": 1, 
+          "condition": 6
+        }, 
+        {
+          "answer": 2, 
+          "condition": 7
+        }, 
+        {
+          "answer": 2, 
+          "condition": 8
+        }, 
+        {
+          "answer": 2, 
+          "condition": 9
+        }, 
+        {
+          "answer": 2, 
+          "condition": 10
+        }, 
+        {
+          "answer": 2, 
+          "condition": 11
+        }, 
+        {
+          "answer": 2
+        }
+      ], 
+      "condition": 1.5
+    }, 
+    {
+      "attribute": "grade", 
+      "children": [
+        {
+          "answer": 1, 
+          "condition": 5
+        }, 
+        {
+          "answer": 1, 
+          "condition": 6
+        }, 
+        {
+          "answer": 1, 
+          "condition": 7
+        }, 
+        {
+          "answer": 1, 
+          "condition": 8
+        }, 
+        {
+          "answer": 2, 
+          "condition": 9
+        }, 
+        {
+          "answer": 2, 
+          "condition": 10
+        }, 
+        {
+          "answer": 2, 
+          "condition": 11
+        }, 
+        {
+          "answer": 2, 
+          "condition": 12
+        }, 
+        {
+          "answer": 2, 
+          "condition": 13
+        }, 
+        {
+          "answer": 2
+        }
+      ], 
+      "condition": 2
+    }, 
+    {
+      "attribute": "grade", 
+      "children": [
+        {
+          "answer": 1, 
+          "condition": 6
+        }, 
+        {
+          "answer": 1, 
+          "condition": 7
+        }, 
+        {
+          "answer": 2, 
+          "condition": 8
+        }, 
+        {
+          "answer": 2, 
+          "condition": 9
+        }, 
+        {
+          "answer": 2, 
+          "condition": 10
+        }, 
+        {
+          "answer": 2, 
+          "condition": 11
+        }, 
+        {
+          "answer": 2, 
+          "condition": 12
+        }, 
+        {
+          "answer": 2, 
+          "condition": 13
+        }, 
+        {
+          "answer": 2
+        }
+      ], 
+      "condition": 2.5
+    }, 
+    {
+      "attribute": "grade", 
+      "children": [
+        {
+          "answer": 1, 
+          "condition": 7
+        }, 
+        {
+          "answer": 1, 
+          "condition": 8
+        }, 
+        {
+          "answer": 2, 
+          "condition": 9
+        }, 
+        {
+          "answer": 2, 
+          "condition": 10
+        }, 
+        {
+          "answer": 2, 
+          "condition": 11
+        }, 
+        {
+          "answer": 2, 
+          "condition": 12
+        }, 
+        {
+          "answer": 1
+        }
+      ], 
+      "condition": 3
+    }, 
+    {
+      "attribute": "sqft_living15", 
+      "children": [
+        {
+          "answer": 2, 
+          "condition": 1370
+        }, 
+        {
+          "answer": 1, 
+          "condition": 1440
+        }, 
+        {
+          "answer": 2, 
+          "condition": 1700
+        }, 
+        {
+          "answer": 2, 
+          "condition": 2360
+        }, 
+        {
+          "answer": 2
+        }
+      ], 
+      "condition": 3.5
+    }, 
+    {
+      "answer": 1
+    }
+  ]
+}
