@@ -30,18 +30,24 @@
 </style>
 <body>
 <h1 align="center">Decision Tree Visualizer</h1>
+<h3>Test with sample JSON- <button type="button" onclick="load_sample()">Load Sample</button></h3>
 <h3>Insert JSON below</h3>
 <textarea id="json_text" cols="100" rows="10" autocomplete="off"></textarea>
+
+<h3>Insert JSON fields to print at nodes (comma-separated)</h3>
+<textarea id="json_fields" cols="100" rows="1" autocomplete="off"></textarea>
 <br/>
-<button type="button" onclick="load_tree()">Visualize</button><button type="button" onclick="load_sample()">Load Sample</button>
+<button type="button" onclick="load_tree()">Visualize</button>
 <p id="error" style="color: red; visibility: hidden;"></p>
 <br/><hr/><br/>
 
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
 
+var ATTRIBUTES;
+
 var margin = {top: 20, right: 120, bottom: 20, left: 120},
-    width = 1024 - margin.right - margin.left,
+    width = 1800 - margin.right - margin.left,
     height = 768 - margin.top - margin.bottom;
 
 var i = 0,
@@ -72,6 +78,7 @@ function load_tree() {
   }
 
   root = json_tree;
+  ATTRIBUTES = textarea_ele.value.replace(/\s+/g, '').split(',');;
   root.x0 = height / 2;
   root.y0 = 0;
 
@@ -89,11 +96,13 @@ function load_tree() {
 }
 
 function load_sample() {
-  textarea_ele = document.getElementById("json_text");
   d3.json("json_tree.json", function(error, json_tree) {
     if (error) throw error;
     console.log(json_tree);
+    textarea_ele = document.getElementById("json_text");
     textarea_ele.value = JSON.stringify(json_tree, null, 2);
+    textarea_ele = document.getElementById("json_fields");
+    textarea_ele.value = "condition, attribute, divide, answer";
     load_tree();
   })
 }
@@ -128,23 +137,14 @@ function update(source) {
       .text(function(d) { 
         s = "";
         prev = false;
-        if (d.condition != null) {
-          s += "Condition- " + d.condition;
-          prev = true
-        }
-        if (d.attribute != null) {
-          s += (prev? " | " : "")
-          s += "Attribute- " + d.attribute;
-          prev = true;
-        }
-        if (d.divide != null) {
-          s += (prev? " | " : "")
-          s += "Divide- " + d.divide;
-          prev = true;
-        }
-        if (d.answer != null) {
-          s += (prev? " | " : "")
-          s += "Answer- " + d.answer;
+
+        for (ctr = 0; ctr < ATTRIBUTES.length; ctr ++) {
+          attr = ATTRIBUTES[ctr];
+          if (d[attr] != null) {
+            s += (prev? " | " : "");
+            s += attr + "- " + d[attr];
+            prev = true;
+          }
         }
         return s;
       })
